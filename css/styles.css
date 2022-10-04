@@ -107,18 +107,19 @@ h1, h2, h3, h4, p, ul {
     margin-left: auto;
 }
 
-.contact-list > li {
-display: inline-flex;
-align-items: baseline;
+.contact-list>li:hover {
+    color: var(--header-hover-color);
+    
 }
 
 .title-svg {
-    margin-right: 10px; 
-     
-}
+    margin-right: 10px;
+    fill: currentColor;
+     }
+
 .title-svg:hover, .title-svg:focus {
     stroke: var(--web-color);
-    fill: var(--web-color);
+    
 }
 
 .contact-list > li:first-child {
@@ -144,12 +145,10 @@ align-items: baseline;
     letter-spacing: 0.02em;
     color: var(--header-adress-item);
     text-decoration: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     }
-
-    .contact-svg {
-
-    }
-
 
 .hero {
     background-color: var(--hero-title-background);
@@ -159,6 +158,9 @@ align-items: baseline;
     background-position: center;
     padding-bottom: 200px;
     padding-top: 200px;
+    margin: 0a;
+    max-width: 1600px;
+
 }
 
 .hero-title {
@@ -300,26 +302,27 @@ align-items: baseline;
 
 
 .cosial-networks {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background-color: var(--button-text);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    stroke: gray;
-    fill: #2196F3;
+    color: var(--client-svg);
+    fill: currentColor;
 }
 
-.team-list>li>ul>li:first-child {
-    margin-left: 32px;
+.team-list>li>ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
-.team-list>li>ul>li:not(:first-child) {
-    margin-left: 10px;
-}
+
 .cosial-networks:hover, .cosial-networks:focus {
     background-color: var(--web-color);
-    stroke: var(--button-text);
+    fill: var(--button-text);
 }
 
 .client-list {
@@ -329,16 +332,18 @@ align-items: baseline;
 
 .client-svg {
     border: 1px solid var(--client-svg);
+    color: var(--client-svg);
     border-radius: 4px;
     width: 170px;
     height: 92px;
     text-align: center;
     padding-top: 16px;
+    fill:currentColor;
+    display: block;
     }
 
 .client-svg:hover {
     border-color:var(--button-background);
-    stroke: var(--button-background);
     fill:var(--button-background);
 }
 
@@ -410,9 +415,10 @@ align-items: baseline;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    color: var(--button-text);
+    color: var(--footer-logo);
     margin-bottom: 20px;
     padding-top: 12px;
+
 }
 .soc-network>ul {
     display: flex;
@@ -426,8 +432,8 @@ align-items: baseline;
     display: flex;
     align-items: center;
     justify-content: center;
-    stroke: gray;
-    fill: #2196F3;
+    color: var(--button-text);
+    fill: currentColor;
 }
 .cosial-networks-footer:hover,
 .cosial-networks-footer:focus {
