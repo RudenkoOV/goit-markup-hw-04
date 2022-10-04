@@ -91,7 +91,7 @@ h1, h2, h3, h4, p, ul {
 }
 .nav-list {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 .nav-list>li:last-child {
     margin-right: 0;
@@ -228,13 +228,14 @@ h1, h2, h3, h4, p, ul {
 }
 
 .svg-work {
-    display: block;
-    width: 270px;
+    display: flex;
     height: 120px;
     border: none;
     border-radius: 4px;
     background-color: var(--btn-portfolio-background);
     margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .team {
@@ -294,11 +295,6 @@ h1, h2, h3, h4, p, ul {
     margin-bottom: 16px;
 }
 
-.team-list>li>ul>li {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    }
 
 
 .cosial-networks {
@@ -309,6 +305,9 @@ h1, h2, h3, h4, p, ul {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cosial-networks>svg {
     color: var(--client-svg);
     fill: currentColor;
 }
@@ -322,6 +321,10 @@ h1, h2, h3, h4, p, ul {
 
 .cosial-networks:hover, .cosial-networks:focus {
     background-color: var(--web-color);
+}
+
+.cosial-networks > svg:hover,
+.cosial-networks > svg:focus {
     fill: var(--button-text);
 }
 
@@ -337,15 +340,21 @@ h1, h2, h3, h4, p, ul {
     width: 170px;
     height: 92px;
     text-align: center;
-    padding-top: 16px;
-    fill:currentColor;
-    display: block;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-svg > svg {
+    fill: currentColor;
+}
 
 .client-svg:hover {
     border-color:var(--button-background);
-    fill:var(--button-background);
 }
+   .client-svg>svg:hover {
+        fill: var(--button-background);
+   }
 
 .footer {
     background: var(--footer-background);
@@ -408,6 +417,7 @@ h1, h2, h3, h4, p, ul {
 .foot {
     display: flex;
     gap: 70px;
+    align-items: baseline;
     }
 
 .soc-text {
@@ -417,28 +427,30 @@ h1, h2, h3, h4, p, ul {
     text-transform: uppercase;
     color: var(--footer-logo);
     margin-bottom: 20px;
-    padding-top: 12px;
-
 }
 .soc-network>ul {
     display: flex;
     gap: 10px;
 }
 .cosial-networks-footer {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background-color: rgba(255, 255, 255, 0.1);;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--button-text);
+ }
+
+.cosial-networks-footer > svg {
     fill: currentColor;
 }
+
 .cosial-networks-footer:hover,
 .cosial-networks-footer:focus {
     background-color: var(--web-color);
-    stroke: var(--button-text);}
+}
 
 .visually-hidden {
     position: absolute;
