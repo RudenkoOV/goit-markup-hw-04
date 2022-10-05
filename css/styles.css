@@ -307,8 +307,8 @@ h1, h2, h3, h4, p, ul {
     justify-content: center;
 }
 
+
 .cosial-networks>svg {
-    color: var(--client-svg);
     fill: currentColor;
 }
 
@@ -319,12 +319,15 @@ h1, h2, h3, h4, p, ul {
     justify-content: center;
 }
 
-.cosial-networks:hover, .cosial-networks:focus {
-    background-color: var(--web-color);
+.team-list>li>ul>li>a {
+    color: var(--client-svg);
+}
+.team-list>li>ul>li>a:hover {
+    color: var(--button-text);
 }
 
-.cosial-networks > svg:hover,
-.cosial-networks > svg:focus {
+.cosial-networks:hover, .cosial-networks:focus {
+    background-color: var(--web-color);
     fill: var(--button-text);
 }
 
@@ -351,10 +354,9 @@ h1, h2, h3, h4, p, ul {
 
 .client-svg:hover {
     border-color:var(--button-background);
+    color: var(--button-background);
 }
-   .client-svg>svg:hover {
-        fill: var(--button-background);
-   }
+
 
 .footer {
     background: var(--footer-background);
